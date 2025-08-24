@@ -14,6 +14,11 @@ const AppPage = () => {
         <p>Welcome, {user.email} and {user.name}</p>
       )}
 
+      <a href="secret" className="bg-red-500 rounded-3xl ">Acess the secret key</a>
+      <br />
+      <br />
+      <br />
+
       <button onClick={logout}>Logout</button>
     </>
   )

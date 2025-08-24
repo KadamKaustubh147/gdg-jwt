@@ -17,6 +17,7 @@ import Activation from "./pages/Activation";
 import { AuthProvider } from "./context/AuthContext-http-jwt";
 import PasswordReset from "./pages/PasswordReset";
 import PrivateRoute from "./pages/PrivateRoute";
+import Secret from "./pages/Secret"
 
 const RootLayout = () => {
   return (
@@ -43,6 +44,7 @@ const router = createBrowserRouter(
       <Route path="/activation/:uid/:token" element={<Activation />} />
       <Route path="password/reset/confirm/:uid/:token" element={<PasswordReset />} />
       <Route path="/newpass" element={<NewPass />} />
+      <Route path="/secret" element={<Secret/>}></Route>
     </Route>
   )
 );

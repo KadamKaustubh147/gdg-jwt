@@ -72,7 +72,7 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:5173",
 ]
 
-ROOT_URLCONF = 'auth_boilerplate.urls'
+ROOT_URLCONF = 'auth_gdg.urls'
 
 TEMPLATES = [
     {
@@ -89,17 +89,20 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'auth_boilerplate.wsgi.application'
+WSGI_APPLICATION = 'auth_gdg.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse(
+        config('DATABASE_URL'),
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
 
 
