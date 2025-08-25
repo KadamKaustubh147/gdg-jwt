@@ -92,7 +92,8 @@ The secret key is not directly exposed. It requires logical investigation throug
 ---
 
 ## 🎥 Demonstration Video
-*(2–3 minute video recommended, link will go here once recorded)*  
+
+<iframe width="903" height="508" src="https://www.youtube.com/embed/R-uryQopnYc" title="GDG submission - Kaustubh - JWT Auth using HTTP only cookie - Django React - Retro style" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 
