@@ -67,11 +67,13 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",    
     "http://127.0.0.1:5173",
+    "https://gdg-jwt-frontend.onrender.com"
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
+    "https://gdg-jwt-frontend.onrender.com"
 ]
 
 ROOT_URLCONF = 'auth_gdg.urls'
