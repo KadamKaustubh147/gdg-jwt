@@ -46,7 +46,10 @@ const router = createBrowserRouter(
       <Route path="/activation/:uid/:token" element={<Activation />} />
       <Route path="password/reset/confirm/:uid/:token" element={<PasswordReset />} />
       <Route path="/newpass" element={<NewPass />} />
-      <Route path="/secret" element={<Secret/>}></Route>
+
+      <Route element={<PrivateRoute />}>
+        <Route path="/secret" element={<Secret />}></Route>
+      </Route>
     </Route>
   )
 );
