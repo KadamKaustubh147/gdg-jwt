@@ -39,14 +39,17 @@ class CustomLoginView(APIView):
                 value=str(refresh.access_token),
                 httponly=True,
                 secure=True,  #! True in production
-                samesite='Lax'
+                samesite='None',
+                domain='.onrender.com'
+                
             )
             res.set_cookie(
                 key='refresh_token',
                 value=str(refresh),
                 httponly=True,
                 secure=True,
-                samesite='Lax'
+                samesite='None'
+                domain='.onrender.com'
             )
             return res
         return Response({'error': 'Invalid credentials'}, status=400)
