@@ -40,7 +40,6 @@ class CustomLoginView(APIView):
                 httponly=True,
                 secure=True,  #! True in production
                 samesite='None',
-                domain='.onrender.com'
                 
             )
             res.set_cookie(
@@ -49,7 +48,6 @@ class CustomLoginView(APIView):
                 httponly=True,
                 secure=True,
                 samesite='None',
-                domain='.onrender.com'
             )
             return res
         return Response({'error': 'Invalid credentials'}, status=400)
@@ -83,7 +81,6 @@ class CustomRefreshView(APIView):
                 httponly=True,
                 secure=True,
                 samesite='None',
-                domain='.onrender.com'
             )
             return res
         except Exception as e:
@@ -169,7 +166,6 @@ class CustomGoogleLoginView(APIView):
                 httponly=True,
                 secure=True,
                 samesite='None',
-                domain='.onrender.com'
             )
             res.set_cookie(
                 key='refresh_token',
@@ -177,7 +173,6 @@ class CustomGoogleLoginView(APIView):
                 httponly=True,
                 secure=True,
                 samesite='None',
-                domain='.onrender.com'
             )
             print("DEBUG: Tokens issued and cookies set.")
             return res
