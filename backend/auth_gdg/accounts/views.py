@@ -48,7 +48,7 @@ class CustomLoginView(APIView):
                 value=str(refresh),
                 httponly=True,
                 secure=True,
-                samesite='None'
+                samesite='None',
                 domain='.onrender.com'
             )
             return res
