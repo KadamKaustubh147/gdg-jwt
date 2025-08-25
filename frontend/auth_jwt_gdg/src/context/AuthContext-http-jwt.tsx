@@ -141,7 +141,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     </AuthContext.Provider>
   );
 };
-
+export { AuthContext }; 
 // ✅ Non-nullable hook
 export const useAuth = (): AuthContextType => {
   const context = useContext(AuthContext);

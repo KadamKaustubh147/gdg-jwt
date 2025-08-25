@@ -1,10 +1,10 @@
 // PrivateRoute.tsx
 import { useContext } from "react";
 import { Navigate, Outlet } from "react-router-dom";
-import { AuthContext } from "../context/AuthContext-http-jwt";
+import { AuthContext, useAuth } from "../context/AuthContext-http-jwt";
 
 const PrivateRoute = () => {
-  const { user, loading } = useContext(AuthContext);
+  const { user, loading } = useAuth();
 
   if (loading) {
     return <div>Loading...</div>;
