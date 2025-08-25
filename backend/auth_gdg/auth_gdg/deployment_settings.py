@@ -45,20 +45,5 @@ DATABASES = {
     )
 }
 
-DJOSER = {
-    "SERIALIZERS": {
-        "user_create": "accounts.serializers.UserCreateSerializer",
-    },
-    # not required below thing if frontend and backend running on same domain
-    'EMAIL_FRONTEND_DOMAIN' "https://gdg-jwt-frontend.onrender.com":,
-    'SEND_ACTIVATION_EMAIL': True,
-    # frontend mei daaldo baas activation link ke liye post request karna padega frontend se --> extract the uid and token from the url using react router hooks
-    'ACTIVATION_URL': 'activation/{uid}/{token}/',
-    'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}/',
-    'USER_CREATE_PASSWORD_RETYPE': True,
-    "PASSWORD_RESET_CONFIRM_RETYPE": True,
-    # if the email is not in the db then give out 400 error --> check djoser endpoints documentation
-    "PASSWORD_RESET_SHOW_EMAIL_NOT_FOUND":True,
-}
 
 FRONTEND_URL="https://gdg-jwt-frontend.onrender.com/"
