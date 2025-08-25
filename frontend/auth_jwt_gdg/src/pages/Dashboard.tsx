@@ -1,11 +1,12 @@
 import FuzzyText from '../components/FuzzyText/FuzzyText';
 import FaultyTerminal from '../components/FaultyTerminal/FaultyTerminal';
-import { useContext } from "react"
-import { AuthContext } from "../context/AuthContext-http-jwt"
+// import { useContext } from "react"
+import { useAuth } from "../context/AuthContext-http-jwt"
 
 const AppPage = () => {
 
-  const { logout, user } = useContext(AuthContext);
+  const { user, logout } = useAuth();
+
 
   return (
     <div className="bg-black text-white h-[100vh]">
