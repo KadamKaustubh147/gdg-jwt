@@ -6,7 +6,6 @@ import {
   Outlet,
 } from "react-router-dom";
 
-import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";

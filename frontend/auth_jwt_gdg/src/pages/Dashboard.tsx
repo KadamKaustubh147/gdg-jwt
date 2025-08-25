@@ -1,6 +1,5 @@
 import FuzzyText from '../components/FuzzyText/FuzzyText';
 import FaultyTerminal from '../components/FaultyTerminal/FaultyTerminal';
-import ASCIIText from '../components/ASCIIText';
 import { useContext } from "react"
 import { AuthContext } from "../context/AuthContext-http-jwt"
 
