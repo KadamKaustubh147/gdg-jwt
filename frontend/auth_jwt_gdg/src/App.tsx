@@ -33,8 +33,11 @@ const RootLayout = () => {
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
-      <Route index element={<HomePage />} />
+      {/* <Route index element={<Dashboard />} /> */}
       <Route path="*" element={<NotFound />} />
+      <Route element={<PrivateRoute />}>
+        <Route index element={<Dashboard />} />
+      </Route>
       <Route element={<PrivateRoute />}>
         <Route path="/app" element={<Dashboard />} />
       </Route>
