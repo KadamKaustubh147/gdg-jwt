@@ -46,4 +46,4 @@ DATABASES = {
 }
 
 
-FRONTEND_URL="https://gdg-jwt-frontend.onrender.com/"
+FRONTEND_URL="https://gdg-jwt-frontend.onrender.com"

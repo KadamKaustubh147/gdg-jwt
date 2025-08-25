@@ -38,14 +38,14 @@ class CustomLoginView(APIView):
                 key='access_token',
                 value=str(refresh.access_token),
                 httponly=True,
-                secure=False,  #! True in production
+                secure=True,  #! True in production
                 samesite='Lax'
             )
             res.set_cookie(
                 key='refresh_token',
                 value=str(refresh),
                 httponly=True,
-                secure=False,
+                secure=True,
                 samesite='Lax'
             )
             return res
