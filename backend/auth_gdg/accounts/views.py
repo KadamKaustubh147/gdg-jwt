@@ -81,8 +81,9 @@ class CustomRefreshView(APIView):
                 key='access_token',
                 value=access_token,
                 httponly=True,
-                secure=False,
-                samesite='Lax'
+                secure=True,
+                samesite='None',
+                domain='.onrender.com'
             )
             return res
         except Exception as e:
@@ -166,15 +167,17 @@ class CustomGoogleLoginView(APIView):
                 key='access_token',
                 value=str(refresh.access_token),
                 httponly=True,
-                secure=False,
-                samesite='Lax'
+                secure=True,
+                samesite='None',
+                domain='.onrender.com'
             )
             res.set_cookie(
                 key='refresh_token',
                 value=str(refresh),
                 httponly=True,
-                secure=False,
-                samesite='Lax'
+                secure=True,
+                samesite='None',
+                domain='.onrender.com'
             )
             print("DEBUG: Tokens issued and cookies set.")
             return res
