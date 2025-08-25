@@ -16,6 +16,7 @@ Seek the body's style—there the secret lies.`);
       <div style={{ width: '100%', height: '100vh', position: 'absolute' }}>
         <LetterGlitch
           glitchSpeed={50}
+          glitchColors={['#2b4539', '#61dca3', '#61b3dc']}
           centerVignette={true}
           outerVignette={false}
           smooth={true}
