@@ -188,7 +188,7 @@ DJOSER = {
         "user_create": "accounts.serializers.UserCreateSerializer",
     },
     # not required below thing if frontend and backend running on same domain
-    'EMAIL_FRONTEND_DOMAIN':"https://gdg-jwt-frontend.onrender.com",
+    'EMAIL_FRONTEND_DOMAIN':"gdg-jwt-frontend.onrender.com",
     'SEND_ACTIVATION_EMAIL': True,
     # frontend mei daaldo baas activation link ke liye post request karna padega frontend se --> extract the uid and token from the url using react router hooks
     'ACTIVATION_URL': 'activation/{uid}/{token}/',
